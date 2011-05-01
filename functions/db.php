@@ -1,7 +1,6 @@
 <?php
 
-
-n =  mysql_connect("localhost", "bigbeak_user_5", "xxxxxx");
+$connection =  mysql_connect("localhost", "bigbeak_user_5", "xxxxxx");
 if (!$connection) {
         die("<br>Database connection failed: " . mysql_error());
 }     

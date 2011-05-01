@@ -1,7 +1,8 @@
 <?php
 
-if (isset($conntection) {
+if (isset($connection)) {
 
 	mysql_close($connection);
 
 }
+?>

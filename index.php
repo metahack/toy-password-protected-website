@@ -1,32 +1,24 @@
 <?php
-
-session_start();
-
+require_once("functions/header.php");
+require_once("functions/db.php");
 $_SESSION['name'] = "TEST...";
-
-$connection =  mysql_connect("localhost", "bigbeak_user_5", "xxxxxx");
-if (!$connection) {
-	die("<br>Database connection failed: " . mysql_error());
-}
-
-$db_select = mysql_select_db("bigbeak", $connection);
-if (!$db_select) {
-	die("<br>Database selection failed: " . mysql_error());
+if (isset($_SESSION['LOGGED_IN'])) {
+	header('Location: home.php');
+	exit;
 }
 
 $result = mysql_query("Select * from users", $connection);
 if (!$result) {
 	die("Database query failed: " . mysql_error());
 }
-
+/*
 $result_2 = mysql_query("update users set visit_count=visit_count+1 where username='busy'", $connection);
 if (!$result_2) {
 	die("Database query failed: " . mysql_error());
 }
+*/
 ?>
 <html>
-
-
 <head>
 <title>index</title>
 </head>
@@ -60,5 +52,5 @@ else {
 </html>
 
 <?php 
-	mysql_close($connection);
+require_once("functions/footer.php");
 ?>
