@@ -9,6 +9,7 @@ if (isset($_SESSION['LOGGED_IN'])) {
 ?>
 <html>
 <head>
+<link rel="stylesheet" href="main.css">
 </head>
 <body>
 
@@ -20,6 +21,8 @@ if (isset($_SESSION['LOGIN_ERROR'])) {
 	
 }
 ?>
+
+<div id="container">
 <form action="login_process.php" method="post">
 
 Username: <input type = "text" name = "username" value = "" />
@@ -28,6 +31,7 @@ Password: <input type = "text" name = "password" value = "" />
 <br>
 <input type = "submit" name = "submit" value = "Submit" />
 </form>
+</div>
 
 </body>
 </html>

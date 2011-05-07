@@ -21,21 +21,30 @@ if (!$result_2) {
 <html>
 <head>
 <title>index</title>
+<link rel="stylesheet" href="main.css">
 </head>
 <body>
-hi!
 
-<a href="login.php">Log in!</a>
+<div id="header">
+welcome to bigbeak
+
+</div>
+<a href="login.php">
+<div id="left">
+log in!
+</div>
+</a>
+
+
+<div id="big_show">
+Hi!
 
 <?php
-
 $var = 2;	
 if (mysql_num_rows($result) == $var) {
-
 	echo "<br> row count = $var.<br>";
 }
 else {
-
 	echo "<br> row count is NOT $var.<br>";
 }
 ?>
@@ -47,7 +56,11 @@ else {
 		echo $row["id"] . " " . $row["username"] . " " . $row["join_date"];
 }
 ?>
+
 </table>
+
+</div>
+
 </body>
 </html>
 

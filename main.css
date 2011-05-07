@@ -1,0 +1,37 @@
+body {
+
+
+}
+
+
+#left {
+
+position: absolute;
+right: 5%;
+top: 15%;
+border: solid 1px #ccc;
+background-color: #ddd;
+padding: 3%;
+
+}
+
+#header {
+	
+	height: 12%;
+	background-color: #ddd;
+	/*text-align: center;
+*/
+	font-size: 4em;
+	position: relative;
+
+}
+
+#big_show {
+	margin: 10%;
+	position: absolute; 
+	height: 50%;
+	width: 50%;
+	left: 10%;
+	background-color: #a0a;
+
+}
