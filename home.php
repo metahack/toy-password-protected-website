@@ -15,20 +15,20 @@ if (!isset($_SESSION['LOGGED_IN'])) {
 </head>
 <body>
 
+<div id="header">welcome to bigbeak</div>
 
-
-<div id="login_container">
-
-<div id="login_item">
 <a href="logout.php">
+<div id="left">
 log out
 </div>
-</div>
-
 </a>
+
+<div id="big_show">
 <?php
 echo $_SESSION['USERNAME'];
 echo "Home!!!";
 ?>
+</div>
+
 </body>
 </html>
