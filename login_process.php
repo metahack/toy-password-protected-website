@@ -3,10 +3,11 @@ require_once("functions/header.php");
 require_once("functions/db.php");
 
 $username = $_POST['username'];
-$password = $_POST['password'];
+$password = sha1($_POST['password']);
 
-$result = mysql_query("SELECT * FROM users WHERE username='$username' AND 
+$result = mysql_query("SELECT * FROM $sql_table WHERE username='$username' AND 
   password = '$password'");
+
 if (!$result) {
 	die("Database query failed: " . mysql_error());
 }
@@ -18,7 +19,7 @@ if (mysql_num_rows($result) == 1) {
 	exit;
 }
 else {
-	$_SESSION['LOGIN_ERROR'] = "bad user name or password.";
+	$_SESSION['LOGIN_ERROR'] = "Bad user name or password.";
 	header("Location: login.php");
 	exit;
 }	
@@ -29,11 +30,8 @@ else {
 <title>processing</title>
 </head>
 <?php
-
-//	echo $_POST['username'] . "<br>";
 	while ($row = mysql_fetch_array($result)) {
-//		echo $row["username"] . " ... " . $row["id"];
-	$_SESSION['USERNAME'] = $row['username'];
+		$_SESSION['USERNAME'] = $row['username'];
 }
 ?>
 <body>

@@ -1,0 +1,4 @@
+This is a drop-in pasword-protected website. It requires that sql/create.sql be run.
+
+The login and username to be used in the browser can be found at the top
+of the file 'sql/create.sql'.

@@ -10,8 +10,8 @@ if (!isset($_SESSION['LOGGED_IN'])) {
 ?>
 <html>
 <head>
-
-<link rel="stylesheet" href="main.css">
+<title>home</title>
+<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 

@@ -8,7 +8,7 @@ if (isset($_SESSION['LOGGED_IN']) && $_SESSION['LOGGED_IN'] == true) {
 }
 ?>
 <html>
-<head><title>index</title><link rel="stylesheet" href="main.css"></head>
+<head><title>index</title><link rel="stylesheet" href="css/main.css"></head>
 <body>
 
 <div id="header">Howdy, Stranger!</div>

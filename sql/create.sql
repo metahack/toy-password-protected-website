@@ -8,8 +8,8 @@ usage:
      database name   =   login_db
 database user name   =   login_db_user
 database user pass   =   passypass
-          hostname   =   localhost
-       login table   =   login_table
+ database hostname   =   localhost
+    db login table   =   login_table
  website user name   =   guapo 
   website password   =   zippy 
 
@@ -33,7 +33,7 @@ create table login_table (
  id int(11) not null auto_increment,
  username varchar(20),
  join_date DATETIME,
- password varchar(20),
+ password varchar(40),
  primary key (id)
 );
 
@@ -46,7 +46,8 @@ insert into login_table
  
  ('guapo',
  NOW(),
- PASSWORD('zippy'));
+/*grabbed sha1 of 'zippy' from browser*/
+'9d422f5321ce4e3fe2369f81589ecdeabb50618d');
 
 /***********
  The end.

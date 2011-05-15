@@ -1,7 +1,11 @@
-<files home.php>
+<files CONFIG>
 order allow,deny
 deny from all
 </files>
 
+<files README>
+order allow,deny
+deny from all
+</files>
 
 
