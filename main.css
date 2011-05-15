@@ -1,38 +1,41 @@
 body {
 	text-align: center;
-
 }
 
+#error {
+	color: red;
+	font-size: 4em;
+}
 
-#left {
+#login {
+	position: absolute;
+	right: 30%;
+}
 
-position: absolute;
-right: 5%;
-top: 15%;
-border: solid 1px #ccc;
-background-color: #ddd;
-padding: 3%;
-
+#right {
+	position: absolute;
+	right: 2%;
+	top: 25%;
+	width: 10%;
+	border: solid 1px #ccc;
+	background-color: #ddd;
+	padding: 3%;
+	z-index: 4;
 }
 
 #header {
-	
-	height: 12%;
+	position: absolute;
 	background-color: #ddd;
-	/*text-align: center;
-*/
 	font-size: 4em;
 	position: relative;
-
 }
 
 #big_show {
 	padding: 5%;
 	margin: 5%;
 	position: absolute; 
-	height: 20%;
+	height: 25%;
 	width: 50%;
 	left: 15%;
 	background-color: #a0a;
-
 }

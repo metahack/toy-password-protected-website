@@ -15,18 +15,17 @@ if (!isset($_SESSION['LOGGED_IN'])) {
 </head>
 <body>
 
-<div id="header">welcome to bigbeak</div>
+<div id="header">Welcome, Friend!</div>
 
 <a href="logout.php">
-<div id="left">
+<div id="right">
 log out
 </div>
 </a>
 
 <div id="big_show">
 <?php
-echo $_SESSION['USERNAME'];
-echo "Home!!!";
+echo "The secret word is \"Rutabaga\".<br>";
 ?>
 </div>
 

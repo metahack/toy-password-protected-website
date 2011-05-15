@@ -1,0 +1,31 @@
+/* test */
+create database testx;
+
+create user test_userx@localhost;
+
+set password for test_userx@localhost = password('pass');
+
+grant all privileges on testx.* to test_userx@localhost with grant option;
+
+flush privileges;
+
+use testx;
+
+create table users(
+ id int(11) not null auto_increment,
+ username varchar(20),
+ join_date DATETIME,
+ password varchar(20),
+ primary key (id)
+);
+
+insert into users
+ (username,
+ join_date,
+ password)
+
+VALUES
+ 
+ ('sadie',
+ NOW(),
+ PASSWORD('pass'));

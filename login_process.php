@@ -10,19 +10,6 @@ $result = mysql_query("SELECT * FROM users WHERE username='$username' AND
 if (!$result) {
 	die("Database query failed: " . mysql_error());
 }
-?>
-
-<html>
-<head>
-<title>processing</title>
-</head>
-<?php
-
-//	echo $_POST['username'] . "<br>";
-	while ($row = mysql_fetch_array($result)) {
-//		echo $row["username"] . " ... " . $row["id"];
-	$_SESSION['USERNAME'] = $row['username'];
-	}
 
 if (mysql_num_rows($result) == 1) {
 
@@ -36,8 +23,22 @@ else {
 	exit;
 }	
 ?>
+
+<html>
+<head>
+<title>processing</title>
+</head>
+<?php
+
+//	echo $_POST['username'] . "<br>";
+	while ($row = mysql_fetch_array($result)) {
+//		echo $row["username"] . " ... " . $row["id"];
+	$_SESSION['USERNAME'] = $row['username'];
+}
+?>
 <body>
 </body>
 </html>
 <?php
 require_once("functions/footer.php");
+?>
