@@ -1,5 +1,0 @@
-drop database if exists testx;
-
-grant usage on *.* to test_userx@localhost;
-
-drop user test_userx@localhost;
